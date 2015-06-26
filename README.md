@@ -8,5 +8,4 @@ This extension is for people like me who stubbornly don't want to change the fon
 
 ###Credit to
 
-* MMConverter API Service
 * [Rabbit Converter](https://github.com/Rabbit-Converter)
