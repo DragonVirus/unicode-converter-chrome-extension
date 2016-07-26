@@ -1,5 +1,7 @@
 ##Zawgyi Text to Unicode Converter (Chrome Extension)
 
+[![webstore](https://developer.chrome.com/webstore/images/ChromeWebStore_BadgeWBorder_v2_206x58.png)](https://goo.gl/uC5HQU)
+
 Chrome Extension which would convert selected text into unicode text. 
 
 This extension is for people like me who stubbornly don't want to change the font style just to read the text. But sometimes when you want to read some text, news on facebook or somewhere else or when some of your friends message you with zawgyi text, it's a bit troublesome to read. So, this extension will help you to read the text by converting the selected zawgyi text into unicode text.
