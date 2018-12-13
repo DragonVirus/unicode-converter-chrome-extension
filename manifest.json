@@ -3,16 +3,25 @@
 
   "name": "Zawgyi Text to Unicode",
   "description": "Convert Zawgyi Text to Unicode Text",
-  "version": "1.0",
+  "version": "2.0",
   "permissions": [
     "tabs",
-    "contextMenus",
-    "webRequest",
-    "http://mmconverter.hexcores.com/api/v1/zg2uni"
+    "contextMenus"
   ],
   "background" : {
-    "scripts" : ["convert.js"]
+    "scripts" : ["background.js"]
   },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "convert.js"
+      ],
+      "all_frames": true
+    }
+  ],
   "icons" : {
     "16": "icon16.png",
     "48": "icon48.png",

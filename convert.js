@@ -668,15 +668,33 @@ function replace_with_rule(rule,output) {
 }
 /* End of Rabbit Convert JS */
 
-chrome.contextMenus.create({
-	"title" : "Convert to Unicode",
-	"contexts": ["selection"],
-	"onclick" : function(e) {
-		var text = e.selectionText;
 
-		var converted = Rabbit.zg2uni(text);
-
-		alert(converted);
-
-	}
+chrome.runtime.onMessage.addListener(function (request) {
+    convertSelectedText(document.activeElement, request.text, request.convertTo);
 });
+
+function convertSelectedText(e, text, convertTo) {
+
+    if (convertTo == 'zawgyi') {
+
+        var convertedText = Rabbit.uni2zg(text);
+
+    } else {
+
+        var convertedText = Rabbit.zg2uni(text);
+        
+    }
+
+    if (e.isContentEditable || e.value) {
+
+        // Need to add function to work with facebook textboxes
+
+        e.value = convertedText;
+
+    } else {
+
+        alert(convertedText);    
+
+    }
+}
+
